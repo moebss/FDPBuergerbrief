@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bürgerbrief | FDP Rhein-Erft</title>
+    <meta name="description"
+        content="Teilen Sie Ihre Ideen und Anliegen mit der FDP Rhein-Erft. Wir hören zu und setzen uns für Sie ein.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bürgerbrief | FDP Rhein-Erft">
+    <meta property="og:description" content="Ihre Stimme zählt! Teilen Sie Ihre Ideen für den Rhein-Erft-Kreis.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📮</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-text">FDP</span>
+                <span class="logo-sub">Rhein-Erft</span>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="main">
+            <div class="hero">
+                <h1>Bürgerbrief</h1>
+                <p class="subtitle">
+                    Haben Sie Ideen, Anregungen oder Anliegen für den <strong>Rhein-Erft-Kreis</strong>?
+                    Wir möchten von Ihnen hören! Nutzen Sie dieses Formular, um uns Ihre Gedanken mitzuteilen.
+                </p>
+            </div>
+
+            <!-- Form Card -->
+            <div class="form-card">
+                <form id="buergerbrief-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Ihr Name <span class="optional">(optional)</span></label>
+                        <input type="text" id="name" name="name" placeholder="Max Mustermann">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-Mail-Adresse <span class="optional">(optional, für
+                                Rückmeldung)</span></label>
+                        <input type="email" id="email" name="email" placeholder="ihre@email.de">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ort">Wohnort im Rhein-Erft-Kreis</label>
+                        <select id="ort" name="ort">
+                            <option value="">Bitte wählen...</option>
+                            <option value="Bedburg">Bedburg</option>
+                            <option value="Bergheim">Bergheim</option>
+                            <option value="Brühl">Brühl</option>
+                            <option value="Elsdorf">Elsdorf</option>
+                            <option value="Erftstadt">Erftstadt</option>
+                            <option value="Frechen">Frechen</option>
+                            <option value="Hürth">Hürth</option>
+                            <option value="Kerpen">Kerpen</option>
+                            <option value="Pulheim">Pulheim</option>
+                            <option value="Wesseling">Wesseling</option>
+                            <option value="Sonstige">Sonstige</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="thema">Themenbereich</label>
+                        <select id="thema" name="thema">
+                            <option value="">Bitte wählen...</option>
+                            <option value="Wirtschaft & Arbeit">Wirtschaft & Arbeit</option>
+                            <option value="Bildung">Bildung</option>
+                            <option value="Verkehr & Infrastruktur">Verkehr & Infrastruktur</option>
+                            <option value="Umwelt & Energie">Umwelt & Energie</option>
+                            <option value="Digitalisierung">Digitalisierung</option>
+                            <option value="Sicherheit">Sicherheit</option>
+                            <option value="Soziales & Gesundheit">Soziales & Gesundheit</option>
+                            <option value="Kultur & Freizeit">Kultur & Freizeit</option>
+                            <option value="Sonstiges">Sonstiges</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nachricht">Ihre Nachricht / Idee *</label>
+                        <textarea id="nachricht" name="nachricht" rows="6"
+                            placeholder="Beschreiben Sie Ihr Anliegen, Ihre Idee oder Ihren Verbesserungsvorschlag..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="datenschutz" required>
+                            <span>Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>
+                                gelesen und bin mit der Verarbeitung meiner Daten einverstanden. *</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>📮 Nachricht absenden</span>
+                    </button>
+                </form>
+
+                <div class="form-note">
+                    <p>* Pflichtfeld. Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.</p>
+                </div>
+            </div>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <h2>Warum Ihre Meinung zählt</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <span class="info-icon">🎯</span>
+                        <h3>Direkte Kommunikation</h3>
+                        <p>Ihre Anliegen erreichen uns direkt – ohne Umwege.</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">💡</span>
+                        <h3>Ideen aufgreifen</h3>
+                        <p>Gute Vorschläge fließen in unsere politische Arbeit ein.</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">🤝</span>
+                        <h3>Bürgernah</h3>
+                        <p>Wir setzen uns für die Menschen im Rhein-Erft-Kreis ein.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2026 FDP Rhein-Erft | <a href="impressum.html">Impressum</a> | <a
+                        href="datenschutz.html">Datenschutz</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Success Message Overlay -->
+    <div id="successOverlay" class="success-overlay hidden">
+        <div class="success-card">
+            <span class="success-icon">✅</span>
+            <h2>Vielen Dank!</h2>
+            <p>Ihre Nachricht wurde erfolgreich übermittelt. Wir werden Ihr Anliegen prüfen.</p>
+            <button onclick="closeSuccess()" class="btn-close">Schließen</button>
+        </div>
+    </div>
+
+    <script>
+        // Form submission handling
+        const form = document.getElementById('buergerbrief-form');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const btn = form.querySelector('.btn-submit');
+            btn.innerHTML = '<span>⏳ Wird gesendet...</span>';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    document.getElementById('successOverlay').classList.remove('hidden');
+                    form.reset();
+                } else {
+                    alert('Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut.');
+                }
+            } catch (error) {
+                alert('Verbindungsfehler. Bitte prüfen Sie Ihre Internetverbindung.');
+            } finally {
+                btn.innerHTML = '<span>📮 Nachricht absenden</span>';
+                btn.disabled = false;
+            }
+        });
+
+        function closeSuccess() {
+            document.getElementById('successOverlay').classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
