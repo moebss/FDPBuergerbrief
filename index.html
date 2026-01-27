@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bürgerbrief | FDP Rhein-Erft</title>
+    <title>Bürgerbrief | Rhein-Erft</title>
     <meta name="description"
-        content="Teilen Sie Ihre Ideen und Anliegen mit der FDP Rhein-Erft. Wir hören zu und setzen uns für Sie ein.">
+        content="Teilen Sie Ihre Ideen und Anliegen für den Rhein-Erft-Kreis. Wir hören zu und setzen uns für Sie ein.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Bürgerbrief | FDP Rhein-Erft">
+    <meta property="og:title" content="Bürgerbrief | Rhein-Erft">
     <meta property="og:description" content="Ihre Stimme zählt! Teilen Sie Ihre Ideen für den Rhein-Erft-Kreis.">
     <meta property="og:type" content="website">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon"
@@ -26,25 +27,26 @@
 </head>
 
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text">BÜRGERBRIEF</span>
+            <span class="logo-sub">Rhein-Erft</span>
+        </div>
+    </header>
+
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="logo">
-                <span class="logo-text">FDP</span>
-                <span class="logo-sub">Rhein-Erft</span>
-            </div>
-        </header>
-
         <!-- Hero Section -->
-        <main class="main">
-            <div class="hero">
-                <h1>Bürgerbrief</h1>
-                <p class="subtitle">
-                    Haben Sie Ideen, Anregungen oder Anliegen für den <strong>Rhein-Erft-Kreis</strong>?
-                    Wir möchten von Ihnen hören! Nutzen Sie dieses Formular, um uns Ihre Gedanken mitzuteilen.
-                </p>
-            </div>
+        <section class="hero">
+            <h1>Ihre Ideen für den <span>Rhein-Erft-Kreis</span></h1>
+            <p class="subtitle">
+                Haben Sie Anregungen, Verbesserungsvorschläge oder Anliegen?
+                Nutzen Sie dieses Formular, um uns Ihre Gedanken mitzuteilen.
+                <strong>Wir hören zu!</strong>
+            </p>
+        </section>
 
+        <main class="main">
             <!-- Form Card -->
             <div class="form-card">
                 <form id="buergerbrief-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -109,12 +111,12 @@
                     </div>
 
                     <button type="submit" class="btn-submit">
-                        <span>📮 Nachricht absenden</span>
+                        <span>Nachricht absenden →</span>
                     </button>
                 </form>
 
                 <div class="form-note">
-                    <p>* Pflichtfeld. Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.</p>
+                    <p>* Pflichtfeld. Ihre Daten werden vertraulich behandelt.</p>
                 </div>
             </div>
 
@@ -130,7 +132,7 @@
                     <div class="info-card">
                         <span class="info-icon">💡</span>
                         <h3>Ideen aufgreifen</h3>
-                        <p>Gute Vorschläge fließen in unsere politische Arbeit ein.</p>
+                        <p>Gute Vorschläge fließen in die politische Arbeit ein.</p>
                     </div>
                     <div class="info-card">
                         <span class="info-icon">🤝</span>
@@ -140,15 +142,15 @@
                 </div>
             </section>
         </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p>© 2026 FDP Rhein-Erft | <a href="impressum.html">Impressum</a> | <a
-                        href="datenschutz.html">Datenschutz</a></p>
-            </div>
-        </footer>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Bürgerbrief Rhein-Erft | <a href="impressum.html">Impressum</a> | <a
+                    href="datenschutz.html">Datenschutz</a></p>
+        </div>
+    </footer>
 
     <!-- Success Message Overlay -->
     <div id="successOverlay" class="success-overlay hidden">
@@ -161,14 +163,13 @@
     </div>
 
     <script>
-        // Form submission handling
         const form = document.getElementById('buergerbrief-form');
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const btn = form.querySelector('.btn-submit');
-            btn.innerHTML = '<span>⏳ Wird gesendet...</span>';
+            btn.innerHTML = '<span>Wird gesendet...</span>';
             btn.disabled = true;
 
             try {
@@ -187,7 +188,7 @@
             } catch (error) {
                 alert('Verbindungsfehler. Bitte prüfen Sie Ihre Internetverbindung.');
             } finally {
-                btn.innerHTML = '<span>📮 Nachricht absenden</span>';
+                btn.innerHTML = '<span>Nachricht absenden →</span>';
                 btn.disabled = false;
             }
         });

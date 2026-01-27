@@ -4,13 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutz | FDP Rhein-Erft Bürgerbrief</title>
+    <title>Datenschutz | Bürgerbrief Rhein-Erft</title>
     <meta name="robots" content="noindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        .legal-page {
+            background: var(--fdp-white);
+        }
+
+        .legal-header {
+            background: var(--fdp-yellow);
+            padding: 20px 24px;
+            text-align: center;
+        }
+
+        .legal-header a {
+            color: var(--fdp-black);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
         .legal-container {
             max-width: 700px;
             margin: 0 auto;
@@ -19,20 +36,23 @@
 
         .legal-container h1 {
             font-size: 2rem;
-            color: var(--fdp-yellow);
+            color: var(--fdp-black);
             margin-bottom: 40px;
+            font-weight: 800;
         }
 
         .legal-container h2 {
             font-size: 1.2rem;
-            color: var(--fdp-yellow);
-            margin: 28px 0 12px;
+            color: var(--fdp-magenta);
+            margin: 32px 0 12px;
+            font-weight: 700;
         }
 
         .legal-container h3 {
             font-size: 1rem;
             color: var(--color-text);
             margin: 20px 0 10px;
+            font-weight: 600;
         }
 
         .legal-container p,
@@ -46,76 +66,89 @@
             padding-left: 24px;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: var(--color-text-muted);
-            text-decoration: none;
-        }
-
-        .back-link:hover {
-            color: var(--fdp-yellow);
+        .legal-container a {
+            color: var(--fdp-magenta);
         }
     </style>
 </head>
 
-<body>
-    <div class="container">
-        <div class="legal-container">
-            <a href="index.html" class="back-link">← Zurück zum Formular</a>
-            <h1>Datenschutzerklärung</h1>
+<body class="legal-page">
+    <header class="legal-header">
+        <a href="index.html">← Zurück zum Formular</a>
+    </header>
 
-            <h2>1. Verantwortlicher</h2>
-            <p>
-                FDP Kreisverband Rhein-Erft<br>
-                E-Mail: info@fdp-rhein-erft.de
-            </p>
+    <div class="legal-container">
+        <h1>Datenschutzerklärung</h1>
 
-            <h2>2. Erhebung und Verarbeitung personenbezogener Daten</h2>
-            <p>
-                Wenn Sie das Kontaktformular auf dieser Seite nutzen, werden folgende Daten erhoben:
-            </p>
-            <ul>
-                <li>Name (optional)</li>
-                <li>E-Mail-Adresse (optional)</li>
-                <li>Wohnort im Rhein-Erft-Kreis</li>
-                <li>Themenbereich</li>
-                <li>Ihre Nachricht</li>
-            </ul>
+        <h2>1. Verantwortlicher</h2>
+        <p>
+            Alexander Rheindorf<br>
+            Burgstraße 60<br>
+            50127 Bergheim<br>
+            E-Mail: kontakt@buergerbrief-rhein-erft.de
+        </p>
 
-            <h2>3. Zweck der Datenverarbeitung</h2>
-            <p>
-                Die Daten werden ausschließlich zur Bearbeitung Ihres Anliegens sowie zur möglichen Rückmeldung
-                verwendet.
-            </p>
-            <ul>
-                <li><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</li>
-                <li><strong>Speicherdauer:</strong> Ihre Daten werden gelöscht, sobald sie für den Zweck ihrer Erhebung
-                    nicht mehr erforderlich sind.</li>
-            </ul>
+        <h2>2. Erhebung und Verarbeitung personenbezogener Daten</h2>
+        <p>
+            Wenn Sie das Kontaktformular auf dieser Seite nutzen, werden folgende Daten erhoben:
+        </p>
+        <ul>
+            <li>Name (optional)</li>
+            <li>E-Mail-Adresse (optional)</li>
+            <li>Wohnort im Rhein-Erft-Kreis</li>
+            <li>Themenbereich</li>
+            <li>Ihre Nachricht</li>
+        </ul>
 
-            <h2>4. Dienstleister</h2>
-            <p>
-                Für die Verarbeitung der Formulardaten nutzen wir Formspree. Weitere Informationen: <a
-                    href="https://formspree.io/legal/privacy-policy" target="_blank"
-                    style="color: var(--fdp-yellow);">Formspree Datenschutz</a>
-            </p>
+        <h2>3. Zweck der Datenverarbeitung</h2>
+        <p>
+            Die Daten werden ausschließlich zur Bearbeitung Ihres Anliegens sowie zur möglichen Rückmeldung verwendet.
+        </p>
+        <ul>
+            <li><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</li>
+            <li><strong>Speicherdauer:</strong> Ihre Daten werden gelöscht, sobald sie für den Zweck ihrer Erhebung
+                nicht mehr erforderlich sind, spätestens jedoch nach 12 Monaten.</li>
+        </ul>
 
-            <h2>5. Ihre Rechte</h2>
-            <p>Sie haben das Recht auf:</p>
-            <ul>
-                <li>Auskunft über Ihre gespeicherten Daten</li>
-                <li>Berichtigung unrichtiger Daten</li>
-                <li>Löschung Ihrer Daten</li>
-                <li>Widerruf Ihrer Einwilligung</li>
-            </ul>
+        <h2>4. Dienstleister</h2>
+        <h3>Hosting</h3>
+        <p>
+            Diese Website wird bei Vercel Inc. gehostet. Weitere Informationen: <a
+                href="https://vercel.com/legal/privacy-policy" target="_blank">Vercel Datenschutz</a>
+        </p>
 
-            <h2>6. Kontakt</h2>
-            <p>Bei Fragen zum Datenschutz wenden Sie sich an: info@fdp-rhein-erft.de</p>
+        <h3>Formularverarbeitung</h3>
+        <p>
+            Für die Verarbeitung der Formulardaten nutzen wir Formspree. Weitere Informationen: <a
+                href="https://formspree.io/legal/privacy-policy" target="_blank">Formspree Datenschutz</a>
+        </p>
 
-            <p><em>Stand: Januar 2026</em></p>
-        </div>
+        <h2>5. Ihre Rechte</h2>
+        <p>Sie haben jederzeit das Recht auf:</p>
+        <ul>
+            <li>Auskunft über Ihre gespeicherten Daten</li>
+            <li>Berichtigung unrichtiger Daten</li>
+            <li>Löschung Ihrer Daten</li>
+            <li>Einschränkung der Verarbeitung</li>
+            <li>Widerruf Ihrer Einwilligung</li>
+            <li>Datenübertragbarkeit</li>
+            <li>Beschwerde bei einer Aufsichtsbehörde</li>
+        </ul>
+
+        <h2>6. Kontakt</h2>
+        <p>
+            Bei Fragen zum Datenschutz wenden Sie sich an:<br>
+            kontakt@buergerbrief-rhein-erft.de
+        </p>
+
+        <p><em>Stand: Januar 2026</em></p>
     </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Bürgerbrief Rhein-Erft</p>
+        </div>
+    </footer>
 </body>
 
 </html>
