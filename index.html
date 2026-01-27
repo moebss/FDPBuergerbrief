@@ -29,147 +29,255 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="logo">
-            <span class="logo-text">BÜRGERBRIEF</span>
-            <span class="logo-sub">Rhein-Erft</span>
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-text">BÜRGERBRIEF</span>
+                <span class="logo-sub">Rhein-Erft</span>
+            </div>
+            <div class="header-counter">
+                <span class="pulse-dot"></span>
+                <span id="messageCount">47</span> Nachrichten erhalten
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Ihre Ideen für den <span>Rhein-Erft-Kreis</span></h1>
-            <p class="subtitle">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="fade-in">Ihre Ideen für den <span>Rhein-Erft-Kreis</span></h1>
+            <p class="subtitle fade-in delay-1">
                 Haben Sie Anregungen, Verbesserungsvorschläge oder Anliegen?
                 Nutzen Sie dieses Formular, um uns Ihre Gedanken mitzuteilen.
                 <strong>Wir hören zu!</strong>
             </p>
-        </section>
+            <div class="hero-stats fade-in delay-2">
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Städte</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">470k+</span>
+                    <span class="stat-label">Einwohner</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Region</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <main class="main">
+    <main class="main">
+        <div class="container">
             <!-- Form Card -->
-            <div class="form-card">
+            <div class="form-card fade-in-up">
+                <div class="form-header">
+                    <h2>📮 Nachricht senden</h2>
+                    <p>Alle Felder mit * sind Pflichtfelder</p>
+                </div>
                 <form id="buergerbrief-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <div class="form-group">
-                        <label for="name">Ihr Name <span class="optional">(optional)</span></label>
-                        <input type="text" id="name" name="name" placeholder="Max Mustermann">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Ihr Name <span class="optional">(optional)</span></label>
+                            <input type="text" id="name" name="name" placeholder="Max Mustermann">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail <span class="optional">(für Rückmeldung)</span></label>
+                            <input type="email" id="email" name="email" placeholder="ihre@email.de">
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">E-Mail-Adresse <span class="optional">(optional, für
-                                Rückmeldung)</span></label>
-                        <input type="email" id="email" name="email" placeholder="ihre@email.de">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="ort">Wohnort im Rhein-Erft-Kreis</label>
-                        <select id="ort" name="ort">
-                            <option value="">Bitte wählen...</option>
-                            <option value="Bedburg">Bedburg</option>
-                            <option value="Bergheim">Bergheim</option>
-                            <option value="Brühl">Brühl</option>
-                            <option value="Elsdorf">Elsdorf</option>
-                            <option value="Erftstadt">Erftstadt</option>
-                            <option value="Frechen">Frechen</option>
-                            <option value="Hürth">Hürth</option>
-                            <option value="Kerpen">Kerpen</option>
-                            <option value="Pulheim">Pulheim</option>
-                            <option value="Wesseling">Wesseling</option>
-                            <option value="Sonstige">Sonstige</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="thema">Themenbereich</label>
-                        <select id="thema" name="thema">
-                            <option value="">Bitte wählen...</option>
-                            <option value="Wirtschaft & Arbeit">Wirtschaft & Arbeit</option>
-                            <option value="Bildung">Bildung</option>
-                            <option value="Verkehr & Infrastruktur">Verkehr & Infrastruktur</option>
-                            <option value="Umwelt & Energie">Umwelt & Energie</option>
-                            <option value="Digitalisierung">Digitalisierung</option>
-                            <option value="Sicherheit">Sicherheit</option>
-                            <option value="Soziales & Gesundheit">Soziales & Gesundheit</option>
-                            <option value="Kultur & Freizeit">Kultur & Freizeit</option>
-                            <option value="Sonstiges">Sonstiges</option>
-                        </select>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ort">Wohnort</label>
+                            <select id="ort" name="ort">
+                                <option value="">Stadt wählen...</option>
+                                <option value="Bedburg">Bedburg</option>
+                                <option value="Bergheim">Bergheim</option>
+                                <option value="Brühl">Brühl</option>
+                                <option value="Elsdorf">Elsdorf</option>
+                                <option value="Erftstadt">Erftstadt</option>
+                                <option value="Frechen">Frechen</option>
+                                <option value="Hürth">Hürth</option>
+                                <option value="Kerpen">Kerpen</option>
+                                <option value="Pulheim">Pulheim</option>
+                                <option value="Wesseling">Wesseling</option>
+                                <option value="Sonstige">Sonstige</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="thema">Themenbereich</label>
+                            <select id="thema" name="thema">
+                                <option value="">Thema wählen...</option>
+                                <option value="Wirtschaft & Arbeit">💼 Wirtschaft & Arbeit</option>
+                                <option value="Bildung">📚 Bildung</option>
+                                <option value="Verkehr & Infrastruktur">🚗 Verkehr & Infrastruktur</option>
+                                <option value="Umwelt & Energie">🌱 Umwelt & Energie</option>
+                                <option value="Digitalisierung">💻 Digitalisierung</option>
+                                <option value="Sicherheit">🛡️ Sicherheit</option>
+                                <option value="Soziales & Gesundheit">❤️ Soziales & Gesundheit</option>
+                                <option value="Kultur & Freizeit">🎭 Kultur & Freizeit</option>
+                                <option value="Sonstiges">📌 Sonstiges</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label for="nachricht">Ihre Nachricht / Idee *</label>
-                        <textarea id="nachricht" name="nachricht" rows="6"
+                        <textarea id="nachricht" name="nachricht" rows="5"
                             placeholder="Beschreiben Sie Ihr Anliegen, Ihre Idee oder Ihren Verbesserungsvorschlag..."
                             required></textarea>
+                        <div class="char-counter"><span id="charCount">0</span> / 2000 Zeichen</div>
                     </div>
 
                     <div class="form-group checkbox-group">
                         <label class="checkbox-label">
                             <input type="checkbox" name="datenschutz" required>
+                            <span class="checkmark"></span>
                             <span>Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>
-                                gelesen und bin mit der Verarbeitung meiner Daten einverstanden. *</span>
+                                gelesen und stimme zu. *</span>
                         </label>
                     </div>
 
                     <button type="submit" class="btn-submit">
-                        <span>Nachricht absenden →</span>
+                        <span class="btn-text">Nachricht absenden</span>
+                        <span class="btn-icon">→</span>
                     </button>
                 </form>
-
-                <div class="form-note">
-                    <p>* Pflichtfeld. Ihre Daten werden vertraulich behandelt.</p>
-                </div>
             </div>
 
             <!-- Info Section -->
             <section class="info-section">
-                <h2>Warum Ihre Meinung zählt</h2>
+                <h2 class="section-title fade-in-up">Warum Ihre Meinung zählt</h2>
                 <div class="info-grid">
-                    <div class="info-card">
-                        <span class="info-icon">🎯</span>
+                    <div class="info-card fade-in-up delay-1">
+                        <div class="info-icon-wrapper">
+                            <span class="info-icon">🎯</span>
+                        </div>
                         <h3>Direkte Kommunikation</h3>
-                        <p>Ihre Anliegen erreichen uns direkt – ohne Umwege.</p>
+                        <p>Ihre Anliegen erreichen uns direkt – ohne Umwege oder Bürokratie.</p>
                     </div>
-                    <div class="info-card">
-                        <span class="info-icon">💡</span>
+                    <div class="info-card fade-in-up delay-2">
+                        <div class="info-icon-wrapper">
+                            <span class="info-icon">💡</span>
+                        </div>
                         <h3>Ideen aufgreifen</h3>
-                        <p>Gute Vorschläge fließen in die politische Arbeit ein.</p>
+                        <p>Gute Vorschläge fließen in die politische Arbeit vor Ort ein.</p>
                     </div>
-                    <div class="info-card">
-                        <span class="info-icon">🤝</span>
+                    <div class="info-card fade-in-up delay-3">
+                        <div class="info-icon-wrapper">
+                            <span class="info-icon">🤝</span>
+                        </div>
                         <h3>Bürgernah</h3>
                         <p>Wir setzen uns für die Menschen im Rhein-Erft-Kreis ein.</p>
                     </div>
                 </div>
             </section>
-        </main>
-    </div>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="section-title fade-in-up">Häufige Fragen</h2>
+                <div class="faq-container">
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Was passiert mit meiner Nachricht?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ihre Nachricht wird von unserem Team gelesen und ausgewertet. Wichtige Anliegen werden in
+                                die politische Arbeit aufgenommen. Bei Rückfragen kontaktieren wir Sie über die
+                                angegebene E-Mail.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up delay-1">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Muss ich meinen Namen angeben?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nein, Sie können auch anonym eine Nachricht senden. Für eine persönliche Rückmeldung
+                                benötigen wir jedoch Ihre E-Mail-Adresse.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up delay-2">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Wie schnell erhalte ich eine Antwort?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Wir versuchen, alle Anfragen innerhalb von 7 Werktagen zu beantworten. Bei komplexeren
+                                Themen kann es etwas länger dauern.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up delay-3">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Werden meine Daten sicher behandelt?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ja, absolut. Ihre Daten werden gemäß DSGVO verarbeitet und nicht an Dritte weitergegeben.
+                                Details finden Sie in unserer Datenschutzerklärung.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>© 2026 Bürgerbrief Rhein-Erft | <a href="impressum.html">Impressum</a> | <a
-                    href="datenschutz.html">Datenschutz</a></p>
+            <div class="footer-brand">
+                <span class="footer-logo">Bürgerbrief Rhein-Erft</span>
+                <p>Ihre Stimme für die Region.</p>
+            </div>
+            <div class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Bürgerbrief Rhein-Erft</p>
         </div>
     </footer>
 
     <!-- Success Message Overlay -->
     <div id="successOverlay" class="success-overlay hidden">
         <div class="success-card">
-            <span class="success-icon">✅</span>
+            <div class="success-animation">
+                <svg class="checkmark" viewBox="0 0 52 52">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+            </div>
             <h2>Vielen Dank!</h2>
-            <p>Ihre Nachricht wurde erfolgreich übermittelt. Wir werden Ihr Anliegen prüfen.</p>
+            <p>Ihre Nachricht wurde erfolgreich übermittelt. Wir werden Ihr Anliegen sorgfältig prüfen.</p>
             <button onclick="closeSuccess()" class="btn-close">Schließen</button>
         </div>
     </div>
 
     <script>
+        // Form submission
         const form = document.getElementById('buergerbrief-form');
+        const charCount = document.getElementById('charCount');
+        const nachricht = document.getElementById('nachricht');
+
+        nachricht.addEventListener('input', () => {
+            charCount.textContent = nachricht.value.length;
+        });
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const btn = form.querySelector('.btn-submit');
-            btn.innerHTML = '<span>Wird gesendet...</span>';
+            btn.classList.add('loading');
             btn.disabled = true;
 
             try {
@@ -182,13 +290,17 @@
                 if (response.ok) {
                     document.getElementById('successOverlay').classList.remove('hidden');
                     form.reset();
+                    charCount.textContent = '0';
+                    // Increment counter animation
+                    const counter = document.getElementById('messageCount');
+                    counter.textContent = parseInt(counter.textContent) + 1;
                 } else {
                     alert('Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut.');
                 }
             } catch (error) {
                 alert('Verbindungsfehler. Bitte prüfen Sie Ihre Internetverbindung.');
             } finally {
-                btn.innerHTML = '<span>Nachricht absenden →</span>';
+                btn.classList.remove('loading');
                 btn.disabled = false;
             }
         });
@@ -196,6 +308,36 @@
         function closeSuccess() {
             document.getElementById('successOverlay').classList.add('hidden');
         }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const isOpen = item.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('open'));
+
+            // Open clicked if was closed
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .fade-in-up').forEach(el => observer.observe(el));
     </script>
 </body>
 
