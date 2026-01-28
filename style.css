@@ -296,6 +296,95 @@ body {
 }
 
 /* ========================================
+   Introduction Section
+   ======================================== */
+.intro-section {
+    margin-top: -40px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-card {
+    background: var(--fdp-white);
+    border-radius: 16px;
+    padding: 36px 40px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    border-left: 4px solid var(--fdp-magenta);
+}
+
+.intro-avatar {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    background: linear-gradient(135deg, var(--fdp-gray-light) 0%, #e8e8e8 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    border: 3px solid var(--fdp-yellow);
+    overflow: hidden;
+}
+
+.intro-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-content h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--fdp-black);
+    margin-bottom: 16px;
+}
+
+.intro-content p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.intro-content p strong {
+    color: var(--fdp-magenta);
+}
+
+.intro-signature {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+    font-style: italic;
+    color: var(--color-text) !important;
+}
+
+.intro-signature strong {
+    color: var(--fdp-black) !important;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .intro-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 24px;
+        gap: 20px;
+    }
+
+    .intro-avatar {
+        margin: 0 auto;
+    }
+
+    .intro-signature {
+        text-align: center;
+    }
+}
+
+/* ========================================
    Form Card
    ======================================== */
 .form-card {
