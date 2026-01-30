@@ -575,81 +575,9 @@ body {
 }
 
 /* Animated Gradient Border */
-.form-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg,
-            var(--fdp-yellow),
-            var(--fdp-magenta),
-            var(--fdp-cyan),
-            var(--fdp-magenta),
-            var(--fdp-yellow));
-    background-size: 300% 100%;
-    animation: gradient-shift 4s linear infinite;
-    border-radius: 24px 24px 0 0;
-}
 
-@keyframes gradient-shift {
-    0% {
-        background-position: 0% 50%;
-    }
 
-    100% {
-        background-position: 300% 50%;
-    }
-}
 
-/* Form Progress Bar */
-.form-progress {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 32px;
-    padding: 0 4px;
-}
-
-.progress-step {
-    flex: 1;
-    height: 4px;
-    background: var(--color-border);
-    border-radius: 2px;
-    position: relative;
-    overflow: hidden;
-    transition: var(--transition);
-}
-
-.progress-step.completed {
-    background: var(--fdp-magenta);
-}
-
-.progress-step.active {
-    background: linear-gradient(90deg, var(--fdp-magenta) 50%, var(--color-border) 50%);
-    background-size: 200% 100%;
-    animation: progress-pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes progress-pulse {
-
-    0%,
-    100% {
-        background-position: 100% 0;
-    }
-
-    50% {
-        background-position: 0% 0;
-    }
-}
-
-.progress-label {
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
-    font-weight: 500;
-    white-space: nowrap;
-}
 
 .form-header {
     text-align: center;

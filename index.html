@@ -91,14 +91,7 @@
         <div class="container">
             <!-- Form Card -->
             <div class="form-card fade-in-up">
-                <!-- Form Progress -->
-                <div class="form-progress">
-                    <span class="progress-label">Ihre Daten</span>
-                    <div class="progress-step" id="step1"></div>
-                    <div class="progress-step" id="step2"></div>
-                    <div class="progress-step" id="step3"></div>
-                    <span class="progress-label">Absenden</span>
-                </div>
+
 
                 <div class="form-header">
                     <h2>📮 Nachricht senden</h2>
@@ -465,55 +458,7 @@
         // ========================================
         // Form Progress
         // ========================================
-        function updateFormProgress() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const ort = document.getElementById('ort').value;
-            const thema = document.getElementById('thema').value;
-            const nachricht = document.getElementById('nachricht').value;
 
-            const step1 = document.getElementById('step1');
-            const step2 = document.getElementById('step2');
-            const step3 = document.getElementById('step3');
-
-            // Step 1: Name or Email
-            if (name || email) {
-                step1.classList.add('completed');
-                step1.classList.remove('active');
-            } else {
-                step1.classList.remove('completed');
-                step1.classList.add('active');
-            }
-
-            // Step 2: Location or Topic
-            if (ort || thema) {
-                step2.classList.add('completed');
-                step2.classList.remove('active');
-            } else if (name || email) {
-                step2.classList.remove('completed');
-                step2.classList.add('active');
-            } else {
-                step2.classList.remove('completed', 'active');
-            }
-
-            // Step 3: Message
-            if (nachricht.length > 10) {
-                step3.classList.add('completed');
-                step3.classList.remove('active');
-            } else if (ort || thema) {
-                step3.classList.remove('completed');
-                step3.classList.add('active');
-            } else {
-                step3.classList.remove('completed', 'active');
-            }
-        }
-
-        // Add listeners to form fields
-        document.querySelectorAll('#buergerbrief-form input, #buergerbrief-form select, #buergerbrief-form textarea')
-            .forEach(field => field.addEventListener('input', updateFormProgress));
-
-        // Initialize progress
-        updateFormProgress();
 
         // ========================================
         // Confetti Animation
@@ -603,8 +548,6 @@
                     document.getElementById('successOverlay').classList.remove('hidden');
                     createConfetti();
                     form.reset();
-                    charCount.textContent = '0';
-                    updateFormProgress();
                 } else {
                     showToast('error', 'Fehler', 'Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut.');
                 }
