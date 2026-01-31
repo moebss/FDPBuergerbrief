@@ -165,6 +165,25 @@ body {
     transform: translateY(-50%) translateX(-22px);
 }
 
+.instagram-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    color: var(--fdp-black);
+    transition: var(--transition);
+}
+
+.instagram-link:hover {
+    background: var(--fdp-magenta);
+    color: var(--fdp-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(229, 0, 125, 0.3);
+}
+
 .header-counter {
     display: flex;
     align-items: center;
@@ -589,6 +608,14 @@ body {
     font-weight: 700;
     color: var(--color-text);
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.icon-inline {
+    color: var(--fdp-magenta);
 }
 
 .form-header p {
@@ -830,16 +857,16 @@ body {
 }
 
 .info-icon-wrapper {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--fdp-gray-light) 0%, #e8e8e8 100%);
-    border-radius: 20px;
+    width: 64px;
+    height: 64px;
+    background: var(--fdp-yellow);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 20px rgba(255, 237, 0, 0.2);
     transition: var(--transition);
-    position: relative;
 }
 
 .info-card:hover .info-icon-wrapper {
@@ -1000,9 +1027,15 @@ body {
     transition: color 0.3s, transform 0.3s;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-social-link:hover {
     color: var(--fdp-yellow);
     transform: translateY(-2px);
+}
+
+.footer-social-link {
+    color: var(--fdp-magenta) !important;
+    font-weight: 700 !important;
 }
 
 .footer-bottom {
