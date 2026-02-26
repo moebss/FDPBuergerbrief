@@ -1,11 +1,17 @@
 import { GoogleGenAI } from "@google/genai";
 
 const apiKey = process.env.GEMINI_API_KEY;
-if (!apiKey) {
-  console.warn("GEMINI_API_KEY is not set.");
-}
 
-const ai = new GoogleGenAI({ apiKey: apiKey || "" });
+let _ai: GoogleGenAI | null = null;
+function getAI(): GoogleGenAI {
+  if (!_ai) {
+    if (!apiKey) {
+      console.warn("GEMINI_API_KEY is not set.");
+    }
+    _ai = new GoogleGenAI({ apiKey: apiKey || "" });
+  }
+  return _ai;
+}
 
 export async function draftCitizenLetter(
   name: string,
@@ -24,7 +30,7 @@ Zusätzliche Infos: ${info}
 Nutze die Google Suche, um aktuelle Fakten oder lokale Gegebenheiten in ${kommune} (Rhein-Erft-Kreis) zum Thema "${topic}" einzubeziehen, falls relevant.
 Halte den Brief prägnant und lösungsorientiert.`;
 
-    const response = await ai.models.generateContent({
+    const response = await getAI().models.generateContent({
       model: "gemini-3-flash-preview",
       contents: prompt,
       config: {
@@ -45,7 +51,7 @@ export async function editImageWithPrompt(
   prompt: string
 ): Promise<string | null> {
   try {
-    const response = await ai.models.generateContent({
+    const response = await getAI().models.generateContent({
       model: "gemini-2.5-flash-image",
       contents: {
         parts: [
@@ -76,7 +82,7 @@ export async function editImageWithPrompt(
 
 export async function generateHeroImage(): Promise<string | null> {
   try {
-    const response = await ai.models.generateContent({
+    const response = await getAI().models.generateContent({
       model: "gemini-2.5-flash-image",
       contents: {
         parts: [
