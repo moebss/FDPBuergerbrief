@@ -28,7 +28,8 @@ Diese Vorlage erklärt, welche Dateien und Stellen angepasst werden müssen, um 
 │   ├── components/
 │   │   ├── Hero.tsx            ← Überschrift, Beschreibung, Name
 │   │   ├── Contact.tsx         ← Name, Bild, Adresse, E-Mail, Telefon
-│   │   └── Form.tsx            ← Kommunen-Dropdown
+│   │   ├── Form.tsx            ← Kommunen-Dropdown
+│   │   └── LegalModals.tsx     ← Impressum & Datenschutz (Name, Adresse, E-Mail, etc.)
 │   └── services/
 │       └── gemini.ts           ← KI-Prompt (Region + Name)
 └── .github/workflows/
@@ -117,7 +118,29 @@ base: '/___REPO_NAME___/',
 
 **Zeilen:** 6-17
 
-### 7. `src/services/gemini.ts` – KI-Prompt (optional)
+### 7. `src/components/LegalModals.tsx` – Impressum & Datenschutz
+
+```diff
+- Alexander Rheindorf
++ ___NAME___
+
+- Willy-Brandt-Platz 1
+- 50126 Bergheim
++ ___STRASSE___
++ ___PLZ_ORT___
+
+- kontakt@alexander-rheindorf.de
++ ___EMAIL___
+
+- +49 (0) 2271 83-0
++ ___TELEFON___
+```
+
+> **Hinweis:** Suchen Sie in der Datei nach "Alexander Rheindorf", "Willy-Brandt-Platz 1", "50126 Bergheim", der E-Mail-Adresse und der Telefonnummer und ersetzen Sie diese durch die neuen Daten. Diese kommen jeweils im Impressum (oben in der Datei) und nochmal im Datenschutz (unten in der Datei) vor.
+
+**Zeilen:** 40-42, 46-47, 51-53, 93-96, 151-152
+
+### 8. `src/services/gemini.ts` – KI-Prompt (optional)
 
 ```diff
 - ...an den Kommunalpolitiker Alexander Rheindorf.
@@ -129,7 +152,7 @@ base: '/___REPO_NAME___/',
 
 **Zeilen:** 24, 30
 
-### 8. `src/App.tsx` – Footer
+### 9. `src/App.tsx` – Footer
 
 ```diff
 - © 2026 Bürgerbrief Rhein-Erft-Kreis.
