@@ -60,14 +60,14 @@ export default function Form() {
   const handleEditImage = async () => {
     if (!imageBase64 || !imagePrompt) return;
     setIsEditingImage(true);
-    
+
     // Extract base64 data and mime type
     const match = imageBase64.match(/^data:(image\/[a-zA-Z]*);base64,(.*)$/);
     if (!match) {
       setIsEditingImage(false);
       return;
     }
-    
+
     const mimeType = match[1];
     const base64Data = match[2];
 
@@ -97,7 +97,7 @@ export default function Form() {
             Bürgerbrief verfassen
           </h3>
           <p className="text-lg text-gray-600">
-            Teilen Sie Ihr Anliegen mit. Hängen Sie bei Bedarf ein Bild an und nutzen Sie unsere KI, um es zu anonymisieren oder Details hervorzuheben.
+            Teile dein Anliegen mit. Hänge bei Bedarf ein Bild an.
           </p>
         </div>
 
@@ -226,7 +226,7 @@ export default function Form() {
                       <X className="w-4 h-4" />
                     </button>
                   </div>
-                  
+
                   <div className="flex flex-col justify-center space-y-3">
                     <label className="block text-sm font-medium text-gray-700">
                       Bild mit KI bearbeiten
