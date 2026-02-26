@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rek-gelb: #ffed00;
+  --color-rek-magenta: #e5007d;
+}
