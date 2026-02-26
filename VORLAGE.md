@@ -8,7 +8,7 @@ Diese Vorlage erklärt, welche Dateien und Stellen angepasst werden müssen, um 
 
 1. **Repo klonen / kopieren**
 2. **Bilder austauschen** (siehe unten)
-3. **6 Dateien anpassen** (siehe Checkliste)
+3. **7 Dateien anpassen** (siehe Checkliste)
 4. **GitHub Repo erstellen**, pushen, GitHub Pages auf "GitHub Actions" stellen
 5. Fertig! 🚀
 
