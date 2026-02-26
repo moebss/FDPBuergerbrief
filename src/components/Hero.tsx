@@ -26,7 +26,7 @@ export default function Hero() {
             <span className="text-rek-gelb">Rhein-Erft-Kreis</span>
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light">
-            Gestalten Sie unsere Heimat aktiv mit. Schreiben Sie Ihren Bürgerbrief direkt an Alexander Rheindorf und bringen Sie Ihre Themen voran.
+            Gestalte deine Heimat aktiv mit. Schreibe deinen Bürgerbrief direkt an mich und bringe deine Themen voran.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
