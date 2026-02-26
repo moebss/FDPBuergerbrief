@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero-bg.png"
+          src={`${import.meta.env.BASE_URL}hero-bg.png`}
           alt="Rhein-Erft-Kreis Landschaft"
           className="w-full h-full object-cover"
         />
@@ -28,7 +28,7 @@ export default function Hero() {
           <p className="mt-4 text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light">
             Gestalten Sie unsere Heimat aktiv mit. Schreiben Sie Ihren Bürgerbrief direkt an Alexander Rheindorf und bringen Sie Ihre Themen voran.
           </p>
-          
+
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#buergerbrief"
