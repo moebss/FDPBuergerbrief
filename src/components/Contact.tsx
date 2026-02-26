@@ -6,7 +6,7 @@ export default function Contact() {
     <section id="ansprechpartner" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -17,10 +17,9 @@ export default function Contact() {
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src={`${import.meta.env.BASE_URL}alexander-rheindorf.jpg`}
                 alt="Alexander Rheindorf"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             {/* Decorative element */}
@@ -69,7 +68,7 @@ export default function Contact() {
                   <p className="mt-1 text-gray-600">kontakt@alexander-rheindorf.de</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 text-gray-600">
